@@ -1,14 +1,15 @@
 //According to the project brief the only thing that needs to be handled by the backend is the api call.
 //I have only defined a get request, which contacts the iStore search. The data collected by the front end is temporary and not stored permanently.
 const express = require('express')
-const helmet = require('helmet')
+//const helmet = require('helmet')
 const app = express()
 
 //Get port from env, or assign 8080.
 const PORT = process.env.PORT || 8080
 
 //Securing with helmet
-app.use(helmet())
+
+//app.use(helmet())
 
 //This function fetches from the iStore search API. Currently in this app, a search term and media type will always be defined
 const getResults = async (searchTerm, mediaType) => {
